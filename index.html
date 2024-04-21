@@ -18,6 +18,11 @@
 </style>
 <body onload=window.location='http://vix.fr.to'">
     <img onclick="javascript:location.href='http://vix.fr.to'" style="height: 80%;" src="./iwantyoutojointhediscordservervix.jpg">
-    <script src="./workers.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('workers.js');
+    }
+</script>
+<script src="workers.js"></script>
 </body>
 </html>
