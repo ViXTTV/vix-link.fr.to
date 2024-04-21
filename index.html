@@ -16,22 +16,8 @@
         display: flex;
     }
 </style>
-<body <!-- onload=window.location='http://vix.fr.to' --> onload="Redirect()">
+<body onload=window.location='http://vix.fr.to'">
     <img onclick="javascript:location.href='http://vix.fr.to'" style="height: 80%;" src="./iwantyoutojointhediscordservervix.jpg">
-    <script>
-        function Redirect() {
-        async function handleRequest(request) {
-    const userAgent = request.headers.get('User-Agent') || '';
-    if (!userAgent.includes('discord')) {
-        return Response.redirect('https://vix.fr.to', 301);
-    } else {
-    return fetch("https://vix-link.fr.to/iwantyoutojointhediscordservervix.jpg");
-}}
-  
-  addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event.request));
-  });
-        }
-    </script>
+    <script src="./workers.js"></script>
 </body>
 </html>
